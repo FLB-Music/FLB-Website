@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Primary Meta Tags -->
+<title>FLB Music Player</title>
+<meta name="title" content="FLB Music Player">
+<meta name="description" content="Music Organization | Audio Tuner | | Streaming | Music Downloader">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://metatags.io/">
+<meta property="og:title" content="FLB Music Player">
+<meta property="og:description" content="Music Organization | Audio Tuner | | Streaming | Music Downloader">
+<meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://metatags.io/">
+<meta property="twitter:title" content="FLB Music Player">
+<meta property="twitter:description" content="Music Organization | Audio Tuner | | Streaming | Music Downloader">
+<meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./animate.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+<link rel="manifest" href="./favicon/site.webmanifest">
+</head>
+<body>
+  <header>
+      <div class="logo">
+        <a href="/"><img  src="./assets/images/logo.png" alt="FLB Music Logo"></a>
+      </div>
+      <div class="header-menu">
+        <ul class="menu-items">
+          <li><a href="/"><span>Home</span></a></li>
+          <li><a href="#about"><span>About</span></a></li>
+          <li><a href="javascript: showChangelog(true);"><span>Changelog</span></a></li>
+        </ul>
+      </div>
+    <button class="btn">Download</button>  
+  </header>
+  <div class="changelog-container">
+      <div class="changelog-overlay"></div>
+      <div class="changelog">
+        <div class="changelog-button"><a href="javascript: showChangelog(false)"><i class="mdi mdi-close"></i></a></div>
+        <div class="changelog-body markdown-body"></div>
+      </div>
+  </div>
+
+    <button onclick="toggleDls()" data-aos="fadeInUp" class="animated" type="button" id="showDlsBt">Download</button> 
+    
+    <div class="dlContainer">
+      <h6>Pick One <span id="version"></span> </h6>
+      <button onclick="toggleDls()" id="closeDls">X</button>
+      <div class="dls">
+        
+    <div class="dl-div">
+      <img src="./assets/images/windows.png" alt="windows logo"/>
+      <button onclick="downloadFile('exe')" type="button">Download</button>
+    </div> 
+      <div class="dl-div">
+      <img src="./assets/images/mac.png" alt="mac os finder logo"/>
+      <button onclick="downloadFile('dmg')" type="button">Download</button>
+    </div> 
+    <div class="dl-div">
+      <img src="./assets/images/linux.png" alt="linux logo"/>
+      <div>
+       <button onclick="downloadFile('AppImage')" type="button">.appimage</button> 
+       <button onclick="downloadFile('deb')" type="button">.deb</button> 
+       <button onclick="downloadFile('snap')" type="button">.snap</button> 
+       <button onclick="downloadFile('rpm')" type="button">.rpm</button> 
+      </div> 
+      
+    </div>
+      </div>
+    </div>
+
+    <main>
+      <h2 data-aos="fadeInUp" class="animated" id="appName">FLB Music</h1>
+      <h1 data-aos="fadeInUp" class="animated">A Beautiful 🌹 Feature Rich 💎 Music Player and Downloader</h1>
+      <img data-aos="fadeInUp3d" class="sectionImg1 mainShot animated" src="./assets/images/home-tab.png" alt="blurred background"/>
+      <img  class="sectionBg" src="./assets/backgrounds/main-bg.png" alt="FLB Music screenshot"/>
+    </main>
+    <section>
+      <div>
+        <h2 data-aos="fadeInUp" class="animated">Organize Your Music 📚️</h2>
+        <p data-aos="fadeInUp" class="animated">Let FLB organize that cluttered library of yours.</p>
+
+        <p data-aos="fadeInUp" class="animated">Your music is neatly organized by artists, albums and folders to allow you to quickly find that track before the moment fades away.</p>
+        <p data-aos="fadeInUp" class="animated">And yes! All the artist images are automatically downloaded. That's such an obvious feature.</p>
+      </div>
+      <img data-aos="fadeInUp" class="sectionImg1 animated" src="./assets/images/tabs.png" alt="Tabs screenshot"/>
+      <img class="sectionBg" src="./assets/backgrounds/tabs-bg.png" alt="blurred background"/>
+    </section>
+    
+    <section>
+      <div data-aos="fadeInUp" class="animated" style="z-index: 4;">
+        <h2>Offline Lyrics 📜</h2>
+        <p>A quick dose of internet and FLB quickly gets all the lyrics for your tracks, available even when you're offline.</p> <p> It also attempts to sync up the lyrics with the song using the neat secret🤫 feature. Enjoy singing along.......</p>
+      </div>
+      <img data-aos="fadeInUp" class="animated sectionImg2" src="./assets/images/lyrics.png" alt="lyrics screenshot"/>
+      <img class="sectionBg" style="background-color: black;" src="./assets/backgrounds/lyrics-bg.png" alt="blurred background"/>
+    </section>
+
+    <section>
+      <div data-aos="fadeInUp" class="animated">
+        <h2>Equalizer 🎛️</h2>
+        <p>FLB comes with a beautiful, simple-to-use 5 band equalizer , coupled with your favorite band presets like dance, pop and more....</p> <p> And if you don't like fiddling with frequencies and decibels, FLB got got you covered. Three simple sliders, for your bass, treble and of course, 200% volume. So slide 'em till you like it yo!</p>
+      </div>
+      <img data-aos="fadeInUp3dSpin" class="animated sectionImg3" src="./assets/images/equalizer.png" alt="equalizer screenshot"/>
+      <img class="sectionBg" style="background-color: black;" src="./assets/backgrounds/equalizer-bg.png" alt="blurred background"/>
+    </section>
+    
+    <section>
+      <div>
+        <h2 data-aos="fadeInUp" class="animated">Daily Mixes 🥣</h2>
+        <p data-aos="fadeInUp" class="animated">Everyday, FLB generates four mixes just for you, based on what you've been listen to.</p>
+        <p data-aos="fadeInUp" class="animated">The <b>"Tracks you've fallen for"</b> mixes the tracks you've been listen to most.</p>
+        <p data-aos="fadeInUp" class="animated">The <b>"Power Duo"</b> Mix tracks from two of your favorite artists.</p> 
+        <p data-aos="fadeInUp" class="animated"> The <b>"Tracks you might have been forgotten"</b> mix for your list played tracks.</p>  
+        <p data-aos="fadeInUp" class="animated"> The <b>"Fresh and Juicy</b> Mix for the latest bangers in your music library</p>
+      </div>
+      <img data-aos="fadeInUp3dSpin2" class="animated sectionImg4" src="./assets/images/daily-mixes.png" alt="daily mixes screenshot"/>
+      <img class="sectionBg" style="background-color: black;" src="./assets/backgrounds/daily-mixes-bg.png" alt="blurred background"/>
+    </section>
+
+    <section>
+      <div>
+        <h2 data-aos="fadeInUp" class="animated">Playlists 👍️</h2>
+        <p data-aos="fadeInUp" class="animated">I mean, is there any better way to organize your music  with this beautiful simple UI? </p>
+        <p data-aos="fadeInUp" class="animated"> You don't even need to open the playlist to play that track for the tenth time. Just click it.</p>
+      </div>
+      <img data-aos="fadeInUp" class="animated sectionImg5" src="./assets/images/playlist.png" alt="playlist tab screenshot"/>
+      <img class="sectionBg" style="background-color: black;" src="./assets/backgrounds/playlist-bg.png" alt="blurred background"/>
+    </section>
+
+    <section>
+      <div>
+        <h2 data-aos="fadeInUp" class="animated">Coming Soon 🔥</h2>
+        <p data-aos="fadeInUp" class="animated">Its Called Meld </p>
+        <p data-aos="fadeInUp" class="animated"> Import  your entire Library from spotify, deezer and other streaming platforms </p>
+        <p data-aos="fadeInUp" class="animated"> And Listen to them right in FLB</p>
+        <p data-aos="fadeInUp" class="animated"> If you like it alot, download it</p>
+      </div>
+      <img data-aos="fadeInUp" class="animated sectionImg6" src="./assets/images/meld.png" alt="Meld Music screaming teaser"/>
+      <img class="sectionBg" style="background-color: black;" src="./assets/backgrounds/meld-bg.png" alt="blurred background"/>
+    </section>
+
+
+    <footer>
+       <div class="fbox">
+      <pre>🤝</pre>
+         <h5>Community</h5>  
+        <div class="links">
+          <a href="https://github.com/FLB-Music">Github</a> 
+          <a href="https://t.me/flbmusiccommunity">Telegram</a>
+          <a href="https://twitter.com/flbmusic">Twitter</a> 
+          <a href="https://t.co/PhKvELQAlC">Discord</a>
+       </div>
+       </div>
+      <div class="fbox">
+      <pre>🤖</pre>
+       <h5>Made By</h5>
+        <p>Patrick Waweru 🇰🇪</p>
+        <div class="links">
+        <a href="https://github.com/Patrick-web">Github</a>
+        <a href="https://twitter.com/PnTX10">Twitter</a>
+        <a href="mailto:patrickwaweruofficial@gmail.com">Email</a>
+        <a href="https://www.youtube.com/channel/UCG3CJL66zKEYD6evtCdeTLQ">YouTube</a>
+        </div>
+     </div>
+     <div class="fbox">
+      <pre>💪</pre>
+       <h5>Contributors</h5>
+       <div>
+         <p>Eddy Ottutski 🇲🇽</p>
+         <a href="t.me/@gitusr">Telegram</a>
+       </div>
+      <div>
+         <p>Fesobi Ifeoluwa 🇳🇬</p>
+         <a href="t.me/@911">Telegram</a>
+       </div>
+     </div>
+    </footer>
+    <script>
+      console.log("jnjas")
+      const fileObjects = new Map()
+      
+      const things = document.querySelectorAll('.animated')
+      console.log(things)
+      const observer = new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+          const cls = entry.target.getAttribute('data-aos')
+          entry.target.classList.toggle(cls, entry.isIntersecting)
+        }),
+        {
+          threshhold:0
+        }
+      })
+        things.forEach(thing=>{
+          console.log("Observing")
+          observer.observe(thing)
+      })
+      function toggleDls(){
+        document.body.classList.toggle("showDls")
+      }
+      getDownloads()
+      function getDownloads() {
+        const GITHUB_API = "https://api.github.com/repos/FLB-Music/FLB-Music-Player/releases/latest";
+        fetch(GITHUB_API, {
+          headers: {
+            Accept: "application/vnd.github.v3+json"
+          }
+        })
+        .then(function(res) {
+          return res.json();
+        })
+        .then(function(data) {
+                document.querySelector('#version').textContent = "(" + data.tag_name+ ")"
+                data.assets.forEach(asset=>{
+                    const extension = getUrlExtension(asset.browser_download_url)
+                    fileObjects.set(extension,asset.browser_download_url)
+                })
+                console.log(fileObjects)
+                
+          })
+        }
+      function getUrlExtension( url ) {
+        return url.split(/[#?]/)[0].split('.').pop().trim();
+      }
+      function downloadFile(type){
+        const url = fileObjects.get(type)        
+        window.open(url,"_blank")
+      }
+
+    </script>
+  </body>
+  </html>
