@@ -17,7 +17,6 @@ body {
     -webkit-font-smoothing: antialiased;
     font-size: .88rem;
     color: #fff;
-    scroll-snap-type: y proximity;
 }
 ::-webkit-scrollbar {
     background-color: #2E3440;
@@ -154,6 +153,7 @@ main{
   padding-top: 40px;
    perspective: 1000px;
   perspective-origin: 50% 50%;
+  background: linear-gradient(0deg,#C2B5B1,#BB886B,#A25B2E);
 }
 main h1{
   text-align: center;
@@ -168,10 +168,32 @@ main h1{
 .mainShot{
   width: 58vw;
   transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(25deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(-30px) translateZ(0px) skewX(0deg) skewY(0deg);
+  border-radius: 16px;
 }
 section{
 display: flex;
 position: relative;
+}
+#section1{
+  background: linear-gradient(#C2B5B1,#382633,#44242F);
+}
+#section2{
+  background: linear-gradient(#44242F,#B09D6A);
+}
+#section3{
+  background: linear-gradient(#B09D6A,#49392F);
+}
+#section4{
+  background: linear-gradient(#49392F,#1C5568);
+}
+#section5{
+  background: linear-gradient(#1C5568,#C7BAA1);
+}
+#section6{
+  background: linear-gradient(#C7BAA1,#EEACA0);
+}
+footer{
+  background: linear-gradient(#EEACA0,#FAC944);
 }
 section div{
   display: flex;
@@ -195,11 +217,16 @@ section p{
   margin-bottom: 10px;
   
 }
+section {
+    background: linear-gradient(#C2B5B1,#3F2E26,#A25B2E,90deg);
+
+}
 section .sectionImg1{
     position: absolute;
     right: 100px;
     top: 40px;
     width: 40%;
+    opacity: 0;
 }
 section .sectionImg2{
     position: absolute;
@@ -207,6 +234,7 @@ section .sectionImg2{
     top: 35px;
     width: 65%;
     top:10%;
+    border-radius: 15px;
 }
 
 section .sectionImg3{
@@ -600,7 +628,6 @@ a {
 footer {
   padding: 40px;
   height: 40vh;
-color: black;
 display: flex;
 justify-content: space-evenly;
 }

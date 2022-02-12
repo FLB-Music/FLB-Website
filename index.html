@@ -80,10 +80,9 @@
     <main>
       <h2 data-aos="fadeInUp" class="animated" id="appName">FLB Music</h1>
       <h1 data-aos="fadeInUp" class="animated">A Beautiful 🌹 Feature Rich 💎 Music Player and Downloader</h1>
-      <img data-aos="fadeInUp3d" class="sectionImg1 mainShot animated" src="./assets/images/home-tab.png" alt="blurred background"/>
-      <img  class="sectionBg" src="./assets/backgrounds/main-bg.png" alt="FLB Music screenshot"/>
+      <img data-aos="fadeInUp3d" class="sectionImg1 mainShot animated" src="./assets/images/home-tab.jpg" alt="blurred background"/>
     </main>
-    <section>
+    <section id="section1">
       <div>
         <h2 data-aos="fadeInUp" class="animated">Organize Your Music 📚️</h2>
         <p data-aos="fadeInUp" class="animated">Let FLB organize that cluttered library of yours.</p>
@@ -92,28 +91,25 @@
         <p data-aos="fadeInUp" class="animated">And yes! All the artist images are automatically downloaded. That's such an obvious feature.</p>
       </div>
       <img data-aos="fadeInUp" class="sectionImg1 animated" src="./assets/images/tabs.png" alt="Tabs screenshot"/>
-      <img class="sectionBg" src="./assets/backgrounds/tabs-bg.png" alt="blurred background"/>
     </section>
     
-    <section>
+    <section id="section2">
       <div data-aos="fadeInUp" class="animated" style="z-index: 4;">
         <h2>Offline Lyrics 📜</h2>
         <p>A quick dose of internet and FLB quickly gets all the lyrics for your tracks, available even when you're offline.</p> <p> It also attempts to sync up the lyrics with the song using the neat secret🤫 feature. Enjoy singing along.......</p>
       </div>
       <img data-aos="fadeInUp" class="animated sectionImg2" src="./assets/images/lyrics.png" alt="lyrics screenshot"/>
-      <img class="sectionBg" style="background-color: black;" src="./assets/backgrounds/lyrics-bg.png" alt="blurred background"/>
     </section>
 
-    <section>
+    <section id="section3">
       <div data-aos="fadeInUp" class="animated">
         <h2>Equalizer 🎛️</h2>
         <p>FLB comes with a beautiful, simple-to-use 5 band equalizer , coupled with your favorite band presets like dance, pop and more....</p> <p> And if you don't like fiddling with frequencies and decibels, FLB got got you covered. Three simple sliders, for your bass, treble and of course, 200% volume. So slide 'em till you like it yo!</p>
       </div>
       <img data-aos="fadeInUp3dSpin" class="animated sectionImg3" src="./assets/images/equalizer.png" alt="equalizer screenshot"/>
-      <img class="sectionBg" style="background-color: black;" src="./assets/backgrounds/equalizer-bg.png" alt="blurred background"/>
     </section>
     
-    <section>
+    <section id="section4">
       <div>
         <h2 data-aos="fadeInUp" class="animated">Daily Mixes 🥣</h2>
         <p data-aos="fadeInUp" class="animated">Everyday, FLB generates four mixes just for you, based on what you've been listen to.</p>
@@ -123,20 +119,18 @@
         <p data-aos="fadeInUp" class="animated"> The <b>"Fresh and Juicy</b> Mix for the latest bangers in your music library</p>
       </div>
       <img data-aos="fadeInUp3dSpin2" class="animated sectionImg4" src="./assets/images/daily-mixes.png" alt="daily mixes screenshot"/>
-      <img class="sectionBg" style="background-color: black;" src="./assets/backgrounds/daily-mixes-bg.png" alt="blurred background"/>
     </section>
 
-    <section>
+    <section id="section5">
       <div>
         <h2 data-aos="fadeInUp" class="animated">Playlists 👍️</h2>
         <p data-aos="fadeInUp" class="animated">I mean, is there any better way to organize your music  with this beautiful simple UI? </p>
         <p data-aos="fadeInUp" class="animated"> You don't even need to open the playlist to play that track for the tenth time. Just click it.</p>
       </div>
       <img data-aos="fadeInUp" class="animated sectionImg5" src="./assets/images/playlist.png" alt="playlist tab screenshot"/>
-      <img class="sectionBg" style="background-color: black;" src="./assets/backgrounds/playlist-bg.png" alt="blurred background"/>
     </section>
 
-    <section>
+    <section id="section6">
       <div>
         <h2 data-aos="fadeInUp" class="animated">Coming Soon 🔥</h2>
         <p data-aos="fadeInUp" class="animated">Its Called Meld </p>
@@ -145,7 +139,6 @@
         <p data-aos="fadeInUp" class="animated"> If you like it alot, download it</p>
       </div>
       <img data-aos="fadeInUp" class="animated sectionImg6" src="./assets/images/meld.png" alt="Meld Music screaming teaser"/>
-      <img class="sectionBg" style="background-color: black;" src="./assets/backgrounds/meld-bg.png" alt="blurred background"/>
     </section>
 
 
@@ -185,11 +178,9 @@
      </div>
     </footer>
     <script>
-      console.log("jnjas")
       const fileObjects = new Map()
       
       const things = document.querySelectorAll('.animated')
-      console.log(things)
       const observer = new IntersectionObserver(entries=>{
         entries.forEach(entry=>{
           const cls = entry.target.getAttribute('data-aos')
@@ -200,7 +191,6 @@
         }
       })
         things.forEach(thing=>{
-          console.log("Observing")
           observer.observe(thing)
       })
       function toggleDls(){
@@ -223,7 +213,6 @@
                     const extension = getUrlExtension(asset.browser_download_url)
                     fileObjects.set(extension,asset.browser_download_url)
                 })
-                console.log(fileObjects)
                 
           })
         }
