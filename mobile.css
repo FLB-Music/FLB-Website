@@ -81,6 +81,9 @@
     color: white; 
     border-radius: 20px 20px 0px 20px;
   }
+.dls{
+  flex-wrap: wrap;
+  } 
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
