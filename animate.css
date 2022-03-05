@@ -10,6 +10,11 @@
   animation-name: fadeInUp3d;
 }
 
+@media only screen and (max-width: 600px) {
+  .fadeInUp{
+    animation-name: slideinup;
+  } 
+}
 
 @keyframes fadeInUp3d {
   from {
@@ -22,7 +27,7 @@
     transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(25deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(-30px) translateZ(0px) skewX(0deg) skewY(0deg);
   }
 }
-@keyframes fadeInUp {
+@keyframes fadeinup {
   from {
     opacity: 0;
     transform: translate3d(0, 20px, 0);
@@ -34,6 +39,15 @@
   }
 }
 
+@keyframes slideinup {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0px, 0);
+  }
+}
 
 
 .fadeInUp3dSpin{

@@ -111,11 +111,13 @@ header{
 }
 .dlContainer h6{
   font-size: 2rem;
+  margin-bottom: 20px;
 }
 .dls{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .dl-div{
   display: flex;

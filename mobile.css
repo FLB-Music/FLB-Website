@@ -1,0 +1,100 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body{
+  scroll-snap-type: y mandatory;
+  }
+  main{
+    justify-content: flex-start;
+  }
+   #appName{
+     font-size: 4rem;
+     margin-bottom: 20px;
+  } 
+  h1{
+    font-size: 2.5rem !important;
+    width: 100% !important;
+    margin-bottom: 80px;
+  }
+  .mainShot{
+    width: 90%;
+    border-radius: 0px;
+  }
+  main,section,footer{
+      scroll-snap-align: start;
+  }
+  section{
+    flex-direction: column;
+  }
+  section div{
+    width: 100%; 
+    padding: 10px;
+    z-index: 2;
+  }
+  section h2{
+   font-size: 2.1rem;  
+  margin-bottom: 10px;
+  }
+  section p{
+    font-size: 1.3rem;
+    line-height: initial;
+   }
+  section .sectionImg1{
+    width: 90%;
+    display: block;
+    top: 30%;
+    left: 5%;
+    opacity: 0.5 !important;
+  }
+  section .sectionImg2{
+    top:35%;
+    width: 140%;
+  }
+  section .sectionImg3{
+    left: 15%;
+    top:initial;
+    bottom:15%;
+    width: 70%;
+  }
+  section .sectionImg4{
+    left: 15%;
+    top:initial;
+    bottom:15%;
+    width: 70%;
+  }
+  section .sectionImg5{
+    left: 10px;
+    top:initial;
+    bottom:28%;
+    width: 120%;
+  }
+  section .sectionImg6{
+    left: 10px;
+    top:initial;
+    bottom:32%;
+    width: 92%;
+  }
+  footer{
+    flex-direction: column;
+    height: auto;
+  }
+ .fbox a {
+    color: white; 
+    border-radius: 20px 20px 0px 20px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
